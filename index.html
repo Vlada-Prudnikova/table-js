@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const count = 10;
+      let array = new Array(count);
+
+      fillMatrix();
+      console.log(array);
+      showMatrix();
+
+      function fillMatrix() {
+        for (let i = 0; i < count; ++i) {
+          array[i] = new Array(count);
+          for (let j = 0; j < count; ++j) {
+            array[i][j] = i * 10 + j + 1;
+          }
+        }
+      }
+      function showMatrix() {
+        for (let i = 0; i < count; ++i) {
+          for (let j = 0; j < count; ++j) {
+            document.write(array[i][j].toString().padStart(5));
+          }
+          document.write("<br />");
+        }
+      }
+    </script>
+  </body>
+</html>
